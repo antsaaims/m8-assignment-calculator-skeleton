@@ -30,5 +30,37 @@ public class Logic
                         int argumentTwo,
                         int operation){
         // TODO -- start your code here
+
+        //1=addition, 2=subtraction,
+           //     3=multiplication, and 4=division
+
+
+
+        Add myoperation;
+
+        switch(operation) {
+
+
+            case 2 :
+                  myoperation= (Subtract) new Subtract(argumentOne,argumentTwo);
+
+                break;
+            case 3 :
+                  myoperation= (Multiply) new Multiply(argumentOne,argumentTwo);
+                break;
+            case 4 :
+                  myoperation=(Divide) new Divide(argumentOne,argumentTwo);
+                break;
+            default :
+                  myoperation=(Add) new Add(argumentOne,argumentTwo);
+                break;
+        }
+
+
+
+      mOut.print(myoperation.Result());
+
+
+
     }
 }
